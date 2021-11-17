@@ -9,6 +9,18 @@ app.use('/hoodjs', express.static(path.join(__dirname, 'myNeighborhood.js')))
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../home.html'))
 })
+app.get('/home', (req, res) => {
+    res.sendFile(path.join(__dirname, '../home.html'))
+})
+app.get('/profile', (req, res) => {
+    res.sendFile(path.join(__dirname, '../profile.html'))
+})
+app.get('/myNeighborhood', (req, res) => {
+    res.sendFile(path.join(__dirname, '../myNeighborhood.html'))
+})
+app.get('/about', (req, res) => {
+    res.sendFile(path.join(__dirname, '../about.html'))
+})
 app.get('/css', (req, res) => {
     res.sendFile(path.join(__dirname, '../styles.css'))
 })
