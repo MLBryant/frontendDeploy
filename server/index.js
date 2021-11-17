@@ -4,6 +4,7 @@ const app = express()
 
 app.use('/css', express.static(path.join(__dirname, '/styles.css')))
 app.use('/profilejs', express.static(path.join(__dirname, 'profile.js')))
+app.use('/homejs', express.static(path.join(__dirname, 'home.js')))
 app.use('/hoodjs', express.static(path.join(__dirname, 'myNeighborhood.js')))
 
 app.get('/', (req, res) => {
@@ -18,9 +19,6 @@ app.get('/profile', (req, res) => {
 app.get('/myNeighborhood', (req, res) => {
     res.sendFile(path.join(__dirname, '../myNeighborhood.html'))
 })
-app.get('/about', (req, res) => {
-    res.sendFile(path.join(__dirname, '../about.html'))
-})
 app.get('/css', (req, res) => {
     res.sendFile(path.join(__dirname, '../styles.css'))
 })
@@ -29,6 +27,9 @@ app.get('/profilejs', (req, res) => {
 })
 app.get('/hoodjs', (req, res) => {
     res.sendFile(path.join(__dirname, '../myNeighborhood.js'))
+})
+app.get('/homejs', (req, res) => {
+    res.sendFile(path.join(__dirname, '../home.js'))
 })
 
 const server = process.env.PORT || 4000
