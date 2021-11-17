@@ -6,7 +6,7 @@ app.use('/css', express.static(path.join(__dirname, 'style.css')))
 app.use('/js', express.static(path.join(__dirname, 'profile.js')))
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './home.html'))
+    res.sendFile(path.join(__dirname, '../home.html'))
 })
 app.get('/css', (req, res) => {
     res.sendFile(path.join(__dirname, './style.css'))
